@@ -1,0 +1,17 @@
+# Node.js
+yaofuji-web/node_modules/
+yaofuji-web/.next/
+yaofuji-web/out/
+
+# Dependencies
+node_modules/
+
+# Debug
+npm-debug.log*
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
