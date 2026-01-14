@@ -1,0 +1,130 @@
+.gallery {
+    background: var(--color-bg-paper);
+}
+
+.slideshow {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.slideContainer {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--color-bg-dark);
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-lg);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: var(--color-text-inverse);
+    font-weight: 500;
+    font-size: var(--font-size-lg);
+}
+
+/* ナビゲーションボタン */
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: var(--radius-full);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+}
+
+.navBtn:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prevBtn {
+    left: var(--spacing-md);
+}
+
+.nextBtn {
+    right: var(--spacing-md);
+}
+
+/* ドットインジケーター */
+.dots {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-sm);
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-text-inverse);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.dot.activeDot {
+    background: var(--color-text-inverse);
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .navBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navBtn:hover {
+        transform: translateY(-50%);
+    }
+
+    .caption {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md);
+    }
+
+    .dots {
+        bottom: var(--spacing-md);
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}

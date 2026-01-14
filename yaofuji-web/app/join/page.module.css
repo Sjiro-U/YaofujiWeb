@@ -1,0 +1,200 @@
+.page {
+    min-height: 100vh;
+}
+
+/* === Hero Section === */
+.hero {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+    padding: var(--spacing-3xl) var(--spacing-md);
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: var(--font-size-4xl);
+    color: var(--color-bg-paper);
+    margin-bottom: var(--spacing-md);
+}
+
+.heroDescription {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+}
+
+/* === Requirements Section === */
+.requirements {
+    background: var(--color-bg-paper);
+}
+
+.requirementGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.requirementCard {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-base);
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-normal);
+}
+
+.requirementCard:hover {
+    transform: translateY(-4px);
+}
+
+.cardIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    color: var(--color-text-inverse);
+    border-radius: 50%;
+    margin-bottom: var(--spacing-md);
+}
+
+.requirementCard h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.requirementCard p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.locationLink {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.locationLink:hover {
+    color: var(--color-accent);
+}
+
+/* === FAQ Section === */
+.faq {
+    background: var(--color-bg-base);
+}
+
+.faqList {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faqItem {
+    background: var(--color-bg-paper);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.faqItem h4 {
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.faqItem p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    line-height: 1.7;
+    padding-left: var(--spacing-md);
+    border-left: 3px solid var(--color-accent);
+}
+
+/* === Contact Section === */
+.contact {
+    background: var(--color-bg-paper);
+}
+
+.formContainer {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--color-bg-base);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.form .btn {
+    align-self: center;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-2xl);
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.successMessage {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    color: var(--color-success);
+}
+
+.successMessage svg {
+    margin-bottom: var(--spacing-md);
+}
+
+.successMessage h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.successMessage p {
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    .requirementGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .heroDescription br {
+        display: none;
+    }
+
+    .requirementGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .formContainer {
+        padding: var(--spacing-lg);
+    }
+}
