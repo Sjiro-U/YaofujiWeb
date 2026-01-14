@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // GitHub Pagesのサブパスに対応（リポジトリ名に変更してください）
-  // basePath: '/YaofujiWeb',
-  // assetPrefix: '/YaofujiWeb',
+  // GitHub Pagesのサブパスに対応
+  basePath: '/YaofujiWeb',
+  assetPrefix: '/YaofujiWeb',
 };
 
 export default nextConfig;
